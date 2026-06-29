@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand Primary Accent (The color that defines actions/buttons) -->
+    <color name="brand_primary">#3F51B5</color>     <!-- Clean Cobalt Blue -->
+    <color name="brand_secondary">#03A9F4</color>   <!-- Vibrant Sky Blue -->
+
+    <!-- Background Shades -->
+    <color name="bg_window">#F8F9FA</color>         <!-- Premium Off-White Screen Canvas -->
+    <color name="bg_card">#FFFFFF</color>           <!-- Stark White Elevated Paper surfaces -->
+
+    <!-- Neutral Typography Scales -->
+    <color name="text_primary">#1C1B1F</color>      <!-- High Contrast Charcoal -->
+    <color name="text_secondary">#49454F</color>    <!-- Mid-tone Slate for subtitles -->
+    <color name="text_muted">#79747E</color>        <!-- Light Gray captions -->
+</resources>
