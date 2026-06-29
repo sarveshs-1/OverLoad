@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Gym Progression Tracker</string>
+    <string name="select_day">Select Training Day:</string>
+    <string name="hint_exercise_name">Exercise (e.g., Bench Press)</string>
+    <string name="hint_weight">Weight (lbs)</string>
+    <string name="hint_reps">Reps completed</string>
+    <string name="btn_save">Log Set</string>
+    <string name="tv_history_placeholder">History will appear here...</string>
+    <string name="error_fill_fields">Please fill in all fields!</string>
+    <string name="save_message">Saved: %1$s at %2$s lbs for %3$s reps for %4$s sets!</string>
+</resources>
