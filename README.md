@@ -1,17 +1,32 @@
-# Overload
-Gym Progression Tracker
+# Overload 
 
-A modern, Material Design 3 Android application to track and manage your daily workout routines.
+A native Android fitness and progression tracking application built in Java. Overload is designed to optimize gym performance by tracking individual workout sets, organizing training schedules, and utilizing local data persistence to monitor physical progression over time.
 
-Features
+##  Key Features
 
-Personalized Experience: Asks for your name and greets you throughout the app.
-Daily Workout Log: Track your sets, reps, and weights for each day of the week.
-Premium UI: Built with Material Card components, custom color palettes, and modern typography.
-Local Persistence: Powered by Room Database for fast and reliable data storage.
-Tech Stack
+* **Progressive Overload Tracking:** Structured log system to record workout sets, reps, and weight progression.
+* **Component-Driven UI:** Uses a modular Fragment architecture (`TodayFragment`, `AddWorkoutFragment`) for smooth, fluid screen transitions.
+* **Dynamic Content Rendering:** Implements a custom `WorkoutAdapter` to dynamically bind and display exercise data efficiently within the user interface.
+* **Secure User Onboarding:** Includes a dedicated `LoginActivity` flow to manage user access sessions.
 
-Language: Java w/ Kotlin base
-Database: Room
-UI Components: Material Components for Android
-Architecture: MVVM (Fragments & Activities)
+##  Architecture & Tech Stack
+
+* **Language:** Java
+* **Platform:** Android SDK / Android Studio
+* **UI Layouts:** XML (Responsive ConstraintLayouts & Material Components)
+* **Local Data Persistence:** SQLite database layer managed via an abstracted Data Access Object (`WorkoutDao.java` & `AppDatabase.java`) to ensure zero data loss between app sessions.
+
+##  Repository Structure
+
+The codebase follows clean architecture principles, separating user interface concerns from core data structures:
+
+```text
+Overload
+│
+├── 📂 src/
+│   ├── 📂 ui/          <-- Frontend visual screens (Activities & Fragments)
+│   ├── 📂 data/        <-- Database infrastructure (SQLite/Room DAO architecture)
+│   ├── 📂 adapters/    <-- Dynamic list view binding (RecyclerView Adapter)
+│   └── 📂 models/      <-- Core data blueprints and structures
+│
+└── 📂 layouts/         <-- Frontend XML responsive layout designs
