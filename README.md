@@ -15,18 +15,3 @@ A native Android fitness and progression tracking application built in Java. Ove
 * **Platform:** Android SDK / Android Studio
 * **UI Layouts:** XML (Responsive ConstraintLayouts & Material Components)
 * **Local Data Persistence:** SQLite database layer managed via an abstracted Data Access Object (`WorkoutDao.java` & `AppDatabase.java`) to ensure zero data loss between app sessions.
-
-##  Repository Structure
-
-The codebase follows clean architecture principles, separating user interface concerns from core data structures:
-
-```text
-Overload
-│
-├── 📂 src/
-│   ├── 📂 ui/          <-- Frontend visual screens (Activities & Fragments)
-│   ├── 📂 data/        <-- Database infrastructure (SQLite/Room DAO architecture)
-│   ├── 📂 adapters/    <-- Dynamic list view binding (RecyclerView Adapter)
-│   └── 📂 models/      <-- Core data blueprints and structures
-│
-└── 📂 layouts/         <-- Frontend XML responsive layout designs
