@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gym Progression Tracker</string>
+    <string name="app_name">Overload</string>
     <string name="select_day">Select Training Day:</string>
     <string name="hint_exercise_name">Exercise (e.g., Bench Press)</string>
     <string name="hint_weight">Weight (lbs)</string>
