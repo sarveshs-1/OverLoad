@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment;
 public class AddWorkoutFragment extends Fragment {
 
     private Spinner spinnerDays;
-    private EditText etExercise, etWeight, etReps;
+    private EditText etExercise, etWeight, etReps, etSets;
     private TextView tvGreeting;
     private AppDatabase db;
 
@@ -32,6 +32,7 @@ public class AddWorkoutFragment extends Fragment {
         etExercise = view.findViewById(R.id.etExerciseName);
         etWeight = view.findViewById(R.id.etWeight);
         etReps = view.findViewById(R.id.etReps);
+        etSets = view.findViewById(R.id.etSets);
         tvGreeting = view.findViewById(R.id.tvGreeting);
         Button btnSave = view.findViewById(R.id.btnSave);
 
@@ -60,13 +61,14 @@ public class AddWorkoutFragment extends Fragment {
         String name = etExercise.getText().toString().trim();
         String weightStr = etWeight.getText().toString().trim();
         String repsStr = etReps.getText().toString().trim();
+        String setsStr = etSets.getText().toString().trim();
 
-        if (name.isEmpty() || weightStr.isEmpty() || repsStr.isEmpty()) {
+        if (name.isEmpty() || weightStr.isEmpty() || repsStr.isEmpty() || setsStr.isEmpty()) {
             Toast.makeText(getContext(), "Please fill all boxes!", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        WorkoutSet newSet = new WorkoutSet(day, name, Integer.parseInt(weightStr), Integer.parseInt(repsStr), 1);
+        WorkoutSet newSet = new WorkoutSet(day, name, Integer.parseInt(weightStr), Integer.parseInt(repsStr), Integer.parseInt(setsStr), null);
         db.workoutDao().insertWorkout(newSet);
         
         Toast.makeText(getContext(), "Logged!", Toast.LENGTH_SHORT).show();
@@ -74,5 +76,6 @@ public class AddWorkoutFragment extends Fragment {
         etExercise.setText("");
         etWeight.setText("");
         etReps.setText("");
+        etSets.setText("");
     }
 }
