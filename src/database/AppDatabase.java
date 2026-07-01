@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 /**
  * This class sets up the actual database file on your phone.
  */
-@Database(entities = {WorkoutSet.class}, version = 1, exportSchema = false)
+@Database(entities = {WorkoutSet.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public abstract WorkoutDao workoutDao(); // Link to our commands
@@ -20,6 +20,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                             AppDatabase.class, "gym_database")
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries() // Allows us to keep the code simple
                     .build();
         }
